@@ -1,0 +1,724 @@
+@import "tailwindcss";
+
+@layer components {
+	.btn-primary {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #14b8a6;
+		border-radius: 9999px;
+		background-color: #14b8a6;
+		padding: 0.625rem 1.5rem;
+		font-weight: 600;
+		color: #0f172a;
+		transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+	}
+
+	.btn-primary:hover {
+		background-color: #000000;
+		border-color: #000000;
+		color: #ffffff;
+	}
+
+	.btn-secondary {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #14b8a6;
+		border-radius: 9999px;
+		background-color: #ffffff;
+		padding: 0.625rem 1.5rem;
+		font-weight: 600;
+		color: #0f172a;
+		transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+	}
+
+	.btn-secondary:hover {
+		background-color: #000000;
+		border-color: #000000;
+		color: #ffffff;
+	}
+}
+
+/* Dashboard-specific scrollbar theme */
+body.dashboard-scrollbar {
+	scrollbar-width: thin;
+	scrollbar-color: #2563eb #111827;
+}
+
+body.dashboard-scrollbar::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+body.dashboard-scrollbar::-webkit-scrollbar-track {
+	background: #111827;
+}
+
+body.dashboard-scrollbar::-webkit-scrollbar-thumb {
+	border: 2px solid #111827;
+	border-radius: 9999px;
+	background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+}
+
+body.dashboard-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
+}
+
+.dashboard-scroll {
+	scrollbar-width: thin;
+	scrollbar-color: #2563eb #0f172a;
+	overflow-y: auto;
+	overscroll-behavior: contain;
+	-webkit-overflow-scrolling: touch;
+}
+
+.dashboard-scroll::-webkit-scrollbar {
+	width: 9px;
+	height: 9px;
+}
+
+.dashboard-scroll::-webkit-scrollbar-track {
+	background: #0f172a;
+	border-radius: 9999px;
+}
+
+.dashboard-scroll::-webkit-scrollbar-thumb {
+	border: 2px solid #0f172a;
+	border-radius: 9999px;
+	background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+}
+
+/* Full dark theme remap for dashboard UIs */
+.dashboard-theme {
+	background-color: #0b1220;
+	color: #f9fafb;
+}
+
+.dashboard-theme .bg-white,
+.dashboard-theme .bg-gray-50,
+.dashboard-theme .bg-gray-100 {
+	background-color: #111827 !important;
+}
+
+.dashboard-theme .bg-slate-50 {
+	background-color: #0b1220 !important;
+}
+
+.dashboard-theme .border-slate-100,
+.dashboard-theme .border-slate-200,
+.dashboard-theme .border-slate-300,
+.dashboard-theme .border-gray-200,
+.dashboard-theme .border-gray-300 {
+	border-color: #1f2937 !important;
+}
+
+.dashboard-theme .text-slate-900,
+.dashboard-theme .text-gray-900,
+.dashboard-theme .text-slate-800,
+.dashboard-theme .text-gray-800 {
+	color: #f9fafb !important;
+}
+
+.dashboard-theme .text-slate-700,
+.dashboard-theme .text-slate-600,
+.dashboard-theme .text-gray-600,
+.dashboard-theme .text-gray-500 {
+	color: #d1d5db !important;
+}
+
+.dashboard-theme .text-slate-500,
+.dashboard-theme .text-gray-400 {
+	color: #9ca3af !important;
+}
+
+.dashboard-theme .text-slate-400 {
+	color: #6b7280 !important;
+}
+
+.dashboard-theme .rounded-2xl.border,
+.dashboard-theme .rounded-3xl.border,
+.dashboard-theme .rounded-4xl.border {
+	border-color: #1f2937 !important;
+	box-shadow: 0 10px 26px rgba(2, 6, 23, 0.35) !important;
+}
+
+.dashboard-theme .rounded-2xl.bg-slate-50,
+.dashboard-theme .rounded-3xl.bg-slate-50,
+.dashboard-theme .rounded-2xl.bg-white,
+.dashboard-theme .rounded-3xl.bg-white {
+	background-image: linear-gradient(180deg, rgba(17, 24, 39, 0.98), rgba(15, 23, 42, 0.98));
+}
+
+.dashboard-theme .placeholder\:text-slate-400::placeholder,
+.dashboard-theme .placeholder\:text-gray-400::placeholder,
+.dashboard-theme .placeholder\:text-gray-500::placeholder {
+	color: #6b7280 !important;
+}
+
+.dashboard-theme .shadow-lg,
+.dashboard-theme .shadow-md,
+.dashboard-theme .shadow-sm,
+.dashboard-theme .shadow-xl,
+.dashboard-theme .shadow-2xl {
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28) !important;
+}
+
+.dashboard-theme .rounded-2xl,
+.dashboard-theme .rounded-3xl,
+.dashboard-theme .rounded-4xl {
+	border-radius: 0.5rem !important;
+}
+
+.dashboard-theme .hover\:bg-slate-50:hover,
+.dashboard-theme .hover\:bg-slate-100:hover,
+.dashboard-theme .hover\:bg-gray-50:hover,
+.dashboard-theme .hover\:bg-gray-100:hover {
+	background-color: #1f2937 !important;
+}
+
+.dashboard-theme .bg-emerald-50 {
+	background-color: rgba(34, 197, 94, 0.2) !important;
+}
+
+.dashboard-theme .text-emerald-600,
+.dashboard-theme .text-emerald-700,
+.dashboard-theme .text-emerald-800 {
+	color: #4ade80 !important;
+}
+
+.dashboard-theme .bg-amber-50,
+.dashboard-theme .bg-yellow-50 {
+	background-color: rgba(234, 179, 8, 0.2) !important;
+}
+
+.dashboard-theme .text-amber-600,
+.dashboard-theme .text-amber-700,
+.dashboard-theme .text-amber-800,
+.dashboard-theme .text-yellow-700 {
+	color: #facc15 !important;
+}
+
+.dashboard-theme .bg-blue-50,
+.dashboard-theme .bg-sky-50 {
+	background-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+.dashboard-theme .text-blue-600,
+.dashboard-theme .text-blue-700,
+.dashboard-theme .text-blue-800,
+.dashboard-theme .text-sky-700 {
+	color: #60a5fa !important;
+}
+
+.dashboard-theme .bg-blue-600 {
+	background-color: #2563eb !important;
+}
+
+.dashboard-theme .hover\:bg-blue-700:hover {
+	background-color: #1d4ed8 !important;
+}
+
+.dashboard-theme .bg-rose-50 {
+	background-color: rgba(234, 179, 8, 0.2) !important;
+}
+
+.dashboard-theme .border-rose-100,
+.dashboard-theme .border-amber-100,
+.dashboard-theme .border-blue-100,
+.dashboard-theme .border-blue-200 {
+	border-color: #1f2937 !important;
+}
+
+.dashboard-theme .text-rose-700,
+.dashboard-theme .text-rose-800 {
+	color: #facc15 !important;
+}
+
+.dashboard-theme table thead {
+	color: #9ca3af !important;
+}
+
+.dashboard-theme table tbody tr:hover {
+	background-color: rgba(31, 41, 55, 0.5) !important;
+}
+
+/* Final typography polish for dashboard readability */
+.dashboard-theme main h2,
+.dashboard-theme main h3,
+.dashboard-theme main h4 {
+	letter-spacing: -0.015em;
+	color: #f9fafb;
+}
+
+.dashboard-theme main .text-4xl,
+.dashboard-theme main .text-3xl,
+.dashboard-theme main .text-2xl {
+	color: #f9fafb !important;
+	letter-spacing: -0.02em;
+}
+
+.dashboard-theme main .text-sm {
+	line-height: 1.5;
+}
+
+.dashboard-theme main .text-xs {
+	line-height: 1.45;
+}
+
+.dashboard-theme main p.text-sm,
+.dashboard-theme main p.text-xs {
+	color: #cbd5e1;
+}
+
+.dashboard-theme main .font-medium {
+	font-weight: 600;
+}
+
+/* Dark-friendly date control for recruiter job form */
+.job-date-input {
+	color-scheme: dark;
+}
+
+.job-date-input::-webkit-calendar-picker-indicator {
+	filter: invert(1) brightness(1.15);
+	opacity: 0;
+	width: 1.5rem;
+	height: 1.5rem;
+	cursor: pointer;
+}
+
+.job-date-input::-webkit-datetime-edit,
+.job-date-input::-webkit-datetime-edit-text,
+.job-date-input::-webkit-datetime-edit-month-field,
+.job-date-input::-webkit-datetime-edit-day-field,
+.job-date-input::-webkit-datetime-edit-year-field {
+	color: #e2e8f0;
+}
+
+.job-date-input:focus::-webkit-calendar-picker-indicator {
+	filter: invert(1) brightness(1.35);
+}
+
+.job-date-input::-ms-clear,
+.job-date-input::-ms-expand {
+	display: none;
+}
+
+.job-date-alt-input {
+	color-scheme: dark;
+}
+
+body.dashboard-theme .flatpickr-calendar,
+body.dashboard-theme .flatpickr-calendar.open,
+body.dashboard-theme .flatpickr-calendar.inline {
+	background: linear-gradient(180deg, #0a1638 0%, #09142f 100%) !important;
+	border: 1px solid rgba(96, 165, 250, 0.3) !important;
+	border-radius: 14px !important;
+	box-shadow: 0 16px 36px rgba(2, 6, 23, 0.6) !important;
+	color: #e2e8f0 !important;
+}
+
+body.dashboard-theme .flatpickr-calendar::before,
+body.dashboard-theme .flatpickr-calendar::after {
+	border-bottom-color: #0a1638 !important;
+}
+
+body.dashboard-theme .flatpickr-months,
+body.dashboard-theme .flatpickr-month,
+body.dashboard-theme .flatpickr-weekdays,
+body.dashboard-theme .flatpickr-rContainer,
+body.dashboard-theme .flatpickr-days,
+body.dashboard-theme .dayContainer {
+	background: transparent !important;
+}
+
+body.dashboard-theme .flatpickr-current-month,
+body.dashboard-theme .flatpickr-current-month .flatpickr-monthDropdown-months,
+body.dashboard-theme .flatpickr-current-month input.cur-year,
+body.dashboard-theme .flatpickr-weekday,
+body.dashboard-theme .numInputWrapper span,
+body.dashboard-theme .flatpickr-prev-month,
+body.dashboard-theme .flatpickr-next-month {
+	color: #e2e8f0 !important;
+	fill: #e2e8f0 !important;
+}
+
+body.dashboard-theme .flatpickr-day {
+	border-radius: 8px !important;
+	color: #dbeafe !important;
+}
+
+body.dashboard-theme .flatpickr-day:hover {
+	background: rgba(59, 130, 246, 0.24) !important;
+	border-color: transparent !important;
+}
+
+body.dashboard-theme .flatpickr-day.selected,
+body.dashboard-theme .flatpickr-day.startRange,
+body.dashboard-theme .flatpickr-day.endRange {
+	background: #3b82f6 !important;
+	border-color: #3b82f6 !important;
+	color: #ffffff !important;
+}
+
+body.dashboard-theme .flatpickr-day.today {
+	border-color: rgba(147, 197, 253, 0.9) !important;
+}
+
+body.dashboard-theme .flatpickr-day.flatpickr-disabled,
+body.dashboard-theme .flatpickr-day.prevMonthDay,
+body.dashboard-theme .flatpickr-day.nextMonthDay {
+	color: #64748b !important;
+}
+
+.flatpickr-time input:hover,
+.flatpickr-time .flatpickr-am-pm:hover,
+.flatpickr-time input:focus,
+.flatpickr-time .flatpickr-am-pm:focus {
+	background: rgba(59, 130, 246, 0.18);
+}
+
+/* Remove native number input spinners for cleaner dark UI */
+body.dashboard-theme input[type='number'] {
+	appearance: textfield;
+	-moz-appearance: textfield;
+}
+
+body.dashboard-theme input[type='number']::-webkit-outer-spin-button,
+body.dashboard-theme input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Remove spinner from flatpickr year input */
+body.dashboard-theme .flatpickr-current-month input.cur-year {
+	appearance: textfield;
+	-moz-appearance: textfield;
+}
+
+body.dashboard-theme .flatpickr-current-month input.cur-year::-webkit-outer-spin-button,
+body.dashboard-theme .flatpickr-current-month input.cur-year::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Dark themed form controls for recruiter/dashboard pages */
+body.dashboard-theme select {
+	color-scheme: dark;
+	background-color: #020b26 !important;
+	color: #e2e8f0 !important;
+	border-color: #334155 !important;
+}
+
+body.dashboard-theme select:focus {
+	border-color: #3b82f6 !important;
+	box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2) !important;
+}
+
+body.dashboard-theme select option,
+body.dashboard-theme select optgroup {
+	color: #e2e8f0;
+	background-color: #0b1220;
+}
+
+/* Custom select component for rich dropdown item styling */
+.custom-select {
+	position: relative;
+}
+
+.custom-select-native {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	pointer-events: none;
+	width: 0;
+	height: 0;
+}
+
+.custom-select-trigger {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem;
+	width: 100%;
+	border: 1px solid #334155;
+	border-radius: 0.75rem;
+	background: linear-gradient(180deg, rgba(37, 99, 235, 0.12), rgba(2, 11, 38, 0.95));
+	padding: 0.625rem 0.95rem;
+	font-size: 0.875rem;
+	color: #e2e8f0;
+	text-align: left;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.custom-select-trigger:hover {
+	border-color: #475569;
+	box-shadow: 0 8px 20px rgba(2, 6, 23, 0.35);
+}
+
+.custom-select.is-open .custom-select-trigger,
+.custom-select-trigger:focus-visible {
+	outline: none;
+	border-color: #3b82f6;
+	box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2), 0 10px 24px rgba(2, 6, 23, 0.45);
+}
+
+.custom-select-chevron {
+	width: 1rem;
+	height: 1rem;
+	color: #93c5fd;
+	transition: transform 0.2s ease;
+	flex-shrink: 0;
+}
+
+.custom-select.is-open .custom-select-chevron {
+	transform: rotate(180deg);
+}
+
+.custom-select-menu {
+	position: absolute;
+	z-index: 45;
+	left: 0;
+	right: 0;
+	margin-top: 0.4rem;
+	border: 1px solid rgba(59, 130, 246, 0.3);
+	border-radius: 0.85rem;
+	background: linear-gradient(180deg, #03102e 0%, #020b22 100%);
+	box-shadow: 0 18px 36px rgba(2, 6, 23, 0.62);
+	padding: 0.35rem;
+	max-height: 14.5rem;
+	overflow-y: auto;
+}
+
+.custom-select-menu.hidden {
+	display: none;
+}
+
+.custom-select-menu::-webkit-scrollbar {
+	width: 8px;
+}
+
+.custom-select-menu::-webkit-scrollbar-thumb {
+	background: rgba(59, 130, 246, 0.45);
+	border-radius: 9999px;
+}
+
+.custom-select-option {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	border: 0;
+	border-radius: 0.6rem;
+	background: transparent;
+	padding: 0.62rem 0.7rem;
+	font-size: 0.84rem;
+	color: #dbeafe;
+	text-align: left;
+	cursor: pointer;
+	transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.custom-select-option:hover,
+.custom-select-option:focus-visible {
+	outline: none;
+	background: rgba(37, 99, 235, 0.24);
+	color: #ffffff;
+}
+
+.custom-select-option.is-selected {
+	background: rgba(37, 99, 235, 0.36);
+	color: #ffffff;
+	font-weight: 600;
+}
+
+.custom-select-check {
+	font-size: 0.78rem;
+	color: #93c5fd;
+	opacity: 0;
+}
+
+.custom-select-option.is-selected .custom-select-check {
+	opacity: 1;
+}
+
+.custom-select-option.is-focused {
+	outline: none;
+	background: rgba(59, 130, 246, 0.32);
+	color: #ffffff;
+}
+
+/* Alert message close button */
+.alert-message {
+	animation: slideInDown 0.3s ease-out;
+}
+
+@keyframes slideInDown {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideOutUp {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+}
+
+.alert-close {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 1.5rem;
+	min-height: 1.5rem;
+	padding: 0.25rem;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+.alert-close:hover {
+	opacity: 0.8;
+}
+
+.alert-close:focus {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+/* Reusable skill tag input component */
+.skill-tag-input {
+	position: relative;
+}
+
+.skill-tag-input::before {
+	content: '';
+	position: absolute;
+	inset: -1px;
+	z-index: 0;
+	border-radius: 1rem;
+	background: linear-gradient(120deg, rgba(59, 130, 246, 0.25), rgba(14, 165, 233, 0.12), rgba(147, 51, 234, 0.18));
+	opacity: 0;
+	transition: opacity 0.2s ease;
+	pointer-events: none;
+}
+
+.skill-tag-input:focus-within::before {
+	opacity: 1;
+}
+
+.skill-tag-control {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.55rem;
+	min-height: 3.25rem;
+	border-radius: 1rem;
+	box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.08), 0 8px 24px rgba(2, 6, 23, 0.25);
+}
+
+.skill-tag-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.skill-chip {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	border: 1px solid rgba(96, 165, 250, 0.45);
+	border-radius: 9999px;
+	background: linear-gradient(180deg, rgba(30, 58, 138, 0.32), rgba(15, 23, 42, 0.95));
+	padding: 0.38rem 0.68rem;
+	font-size: 0.79rem;
+	font-weight: 600;
+	color: #eff6ff;
+	letter-spacing: 0.01em;
+}
+
+.skill-chip button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 1rem;
+	height: 1rem;
+	border: 0;
+	border-radius: 9999px;
+	background: rgba(248, 113, 113, 0.25);
+	color: #fee2e2;
+	cursor: pointer;
+}
+
+.skill-chip button:hover {
+	background: rgba(248, 113, 113, 0.4);
+}
+
+.skill-tag-text-input {
+	flex: 1 1 220px;
+	min-width: 170px;
+	line-height: 1.35;
+}
+
+.skill-suggestions {
+	position: absolute;
+	z-index: 35;
+	margin-top: 0.4rem;
+	width: 100%;
+	border: 1px solid #334155;
+	border-radius: 0.9rem;
+	background: linear-gradient(180deg, #03102e 0%, #020b22 100%);
+	box-shadow: 0 18px 34px rgba(2, 6, 23, 0.6);
+	max-height: 15.5rem;
+	overflow-y: auto;
+	overflow: hidden;
+}
+
+.skill-suggestions::-webkit-scrollbar {
+	width: 8px;
+}
+
+.skill-suggestions::-webkit-scrollbar-thumb {
+	background: rgba(59, 130, 246, 0.45);
+	border-radius: 9999px;
+}
+
+.skill-suggestion-item {
+	width: 100%;
+	display: block;
+	border: 0;
+	background: transparent;
+	padding: 0.72rem 0.9rem;
+	text-align: left;
+	font-size: 0.84rem;
+	color: #cbd5e1;
+	cursor: pointer;
+	border-bottom: 1px solid rgba(51, 65, 85, 0.35);
+}
+
+.skill-suggestion-item:last-child {
+	border-bottom: none;
+}
+
+.skill-suggestion-item:hover {
+	background: rgba(37, 99, 235, 0.22);
+	color: #ffffff;
+}
+
+.skill-suggestion-item.is-active {
+	background: rgba(37, 99, 235, 0.3);
+	color: #ffffff;
+}
