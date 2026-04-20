@@ -11,6 +11,7 @@ class Applications extends Model
 
     protected $fillable = [
         'listing_id',
+        'user_id',
         'applicant_name',
         'applicant_email',
         'slug',
