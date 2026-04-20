@@ -6,6 +6,7 @@ use App\Models\Applications;
 use App\Models\Listing;
 use App\Models\ListingView;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -101,6 +102,7 @@ class DefaultController extends Controller
 
         Applications::create([
             'listing_id' => $listing->id,
+            'user_id' => Auth::user()->id,
             'applicant_name' => $request->first_name . ' ' . $request->last_name,
             'slug' => $slug,
             'applicant_email' => $request->email,
